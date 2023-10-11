@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>PlayStation Store</title>
+
+    <style>
+
+        /* Reset de Estilos */
+
+body, h1, h2, h3, p, ul, li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+ 
+
+/* Estilos Globais */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #000;
+
+    color: #fff;
+
+}
+
+ 
+
+header {
+
+    background-color: #003087;
+
+    padding: 20px 0;
+
+}
+
+ 
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+ 
+
+.logo img {
+
+    max-height: 50px;
+
+}
+
+ 
+
+nav ul {
+
+    list-style-type: none;
+
+    display: flex;
+
+}
+
+ 
+
+nav li {
+
+    margin-right: 20px;
+
+}
+
+ 
+
+nav a {
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-weight: bold;
+
+    transition: color 0.3s;
+
+}
+
+ 
+
+nav a:hover {
+
+    color: #ff5a00;
+
+}
+
+ 
+
+.featured-games {
+
+    text-align: center;
+
+    padding: 100px 0;
+
+}
+
+ 
+
+.featured-games h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+.featured-games p {
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+ 
+
+.explore-button {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #ff5a00;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+
+}
+
+ 
+
+.explore-button:hover {
+
+    background-color: #ff7a2a;
+
+}
+
+ 
+
+footer {
+
+    text-align: center;
+
+    background-color: #003087;
+
+    color: #fff;
+
+    padding: 20px 0;
+
+}
+
+/* Reset de Estilos */
+
+body, h1, p, a {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+ 
+
+/* Estilos Globais */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #000;
+
+    color: #fff;
+
+}
+
+ 
+
+.featured-games {
+
+    text-align: center;
+
+    padding: 100px 0;
+
+    position: relative;
+
+}
+
+ 
+
+.featured-games h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+.image-carousel {
+
+    display: flex;
+
+    overflow: hidden;
+
+    justify-content: space-between;
+
+    animation: carousel-animation 10s linear infinite;
+
+}
+
+ 
+
+.image-carousel img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 10px;
+
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.featured-games:hover .image-carousel img {
+
+    transform: scale(1.1);
+
+}
+
+.explore-button {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #ff5a00;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+
+}
+
+.explore-button:hover {
+
+    background-color: #ff7a2a;
+
+}
+
+.search-bar {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+ 
+
+.search-bar input[type="text"] {
+
+    padding: 10px;
+
+    border: 1px solid #333;
+
+    border-radius: 5px;
+
+    margin-right: 10px;
+
+}
+
+ 
+
+.search-bar button {
+
+    padding: 10px 20px;
+
+    background-color: #333;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+ 
+
+.search-bar button:hover {
+
+    background-color: #555;
+
+}
+		.container {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+        }
+
+        .product {
+
+            border: 1px solid #ccc;
+
+            padding: 10px;
+
+            margin: 10px;
+
+            display: inline-block;
+
+            width: calc(33.33% - 20px);
+
+            box-sizing: border-box;
+
+        }
+
+        .product img {
+
+         max-width: 50%;
+
+         height: auto;
+
+        }
+
+        .carousel {
+
+         display: flex;
+
+         overflow: hidden;
+
+         width: 100%;
+
+         max-width: 2000px;
+
+         margin: 0 auto;
+
+        }
+
+ 
+
+        .carousel-inner {
+
+         display: flex;
+
+         transition: transform 0.5s ease-in-out;
+
+        }
+
+ 
+
+       .carousel-item {
+
+        flex: 0 0 26%;
+        
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="PlayStation Logo">
+            </div>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>  
+	<div class="container">
+       <div class="carousel">
+        <div class="carousel-inner">   
+           <div class="carousel-item">
+            <img src="img/Aranha.png" alt="Homem-Aranha">
+          </div>
+			<div class="carousel-item">
+            <img src="img/Call.png" alt="Call">
+          </div>
+			<div class="carousel-item">
+            <img src="img/mortal.png" alt="Mortal">
+          </div>
+			<div class="carousel-item">
+            <img src="img/valorant.png" alt="Valorant">
+          </div>
+		   </div>
+		   </div>
+		</div>
+            <h1>RECEBA!</h1>
+            <a href="#" class="explore-button">Explorar Jogos</a>
+      <script src="script.js">
+
+        const carouselInner = document.querySelector('.carousel-inner');
+
+        const carouselItems = document.querySelectorAll('.carousel-item');
+
+        let currentIndex = 0;
+
+       
+
+        function showSlide(index) {
+
+          carouselInner.style.transform = `translateX(-${index * 17}%)`;
+
+        }
+
+         
+
+        setInterval(() => {
+
+          currentIndex = (currentIndex + 1.5) % carouselItems.length;
+
+          showSlide(currentIndex);
+
+        }, 4000);
+
+   
+
+     </script> 
+   
+    <footer>
+        <p>&copy; 2023 PixelG</p>
+    </footer>
+	
+</body>
+	
+</html>
